@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rj-api.iml" filepath="$PROJECT_DIR$/rj-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rj-common/rj-common.iml" filepath="$PROJECT_DIR$/rj-common/rj-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rj-eureka-server/rj-eureka-server.iml" filepath="$PROJECT_DIR$/rj-eureka-server/rj-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../rj-parent/rj-parent.iml" filepath="$PROJECT_DIR$/../rj-parent/rj-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rj-web-api/rj-web-api.iml" filepath="$PROJECT_DIR$/rj-web-api/rj-web-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rj-zuul/rj-zuul.iml" filepath="$PROJECT_DIR$/rj-zuul/rj-zuul.iml" />
+    </modules>
+  </component>
+</project>

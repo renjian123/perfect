@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.zuul.repositories.ServiceProviderDao">
+
+    <resultMap id="serviceProviderMap" type="com.demo.common.bean.ServiceProvider">
+        <id property="id" column="asp_id" />
+        <result property="path" column="asp_path" />
+        <result property="serviceId" column="asp_service_id" />
+        <result property="url" column="asp_url" />
+        <result property="retryAble" column="asp_retryable" />
+        <result property="enabled" column="asp_enabled" />
+        <result property="stripPrefix" column="asp_strip_prefix" />
+        <result property="appName" column="asp_app_name" />
+        <result property="serviceType" column="asp_service_type" />
+    </resultMap>
+
+
+    <select id="getApiServiceProviderList" resultMap="serviceProviderMap">
+        select *from service_provider
+    </select>
+</mapper>

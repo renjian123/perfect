@@ -1,0 +1,6 @@
+com\demo\common\param\Result.class
+com\demo\common\bean\ServiceProvider.class
+com\demo\common\bean\Student.class
+com\demo\common\param\ResultBuilder.class
+com\demo\common\interceptor\LogInterceptor.class
+com\demo\common\config\RequestIdConverter.class

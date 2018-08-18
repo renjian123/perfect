@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rj-common" />
+        <module name="rj-eureka-server" />
+        <module name="rj-web-api" />
+        <module name="rj-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rj-api" target="1.8" />
+      <module name="rj-common" target="1.8" />
+      <module name="rj-eureka-server" target="1.8" />
+      <module name="rj-parent" target="1.8" />
+      <module name="rj-web-api" target="1.8" />
+      <module name="rj-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

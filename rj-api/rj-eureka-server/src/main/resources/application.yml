@@ -1,0 +1,50 @@
+spring:
+  profiles:
+    active: renjian
+  application:
+    name: rj-eureka-server
+    
+eureka:
+  server:
+    enable-self-preservation: false
+#eureka.server.eviction-interval-timer-in-ms 清理间隔（单位毫秒，默认是60*1000）
+    
+---
+spring:
+  profiles: renjian1
+
+server:
+  port: 40110
+logging:
+  level:
+    root: warn
+security:
+  user:
+    name: renjian
+    password: 123456
+eureka:
+  instance:
+    hostname: DELL01
+  client:
+    serviceUrl:
+      defaultZone: http://renjian:123456@localhost:40111/eureka
+      
+---
+spring:  
+  profiles: renjian2
+  
+server:
+  port: 40111
+logging:
+  level:
+    root: warn
+security:
+  user:
+    name: renjian
+    password: 123456
+eureka:
+  instance:
+    hostname: DELL03
+  client:
+    serviceUrl:
+      defaultZone: http://renjian:123456@localhost:40110/eureka/
