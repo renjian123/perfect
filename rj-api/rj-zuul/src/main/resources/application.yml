@@ -74,10 +74,10 @@ zuul:
   host:
     socket-timeout-millis: 20000
     connect-timeout-millis: 10000
-  routes:
-    api-a:
-       path: /api/**
-       serviceId: rj-web-api
+#  routes:
+#    api-a:
+#       path: /api/**
+#       serviceId: rj-web-api
     
 hystrix:
   command:

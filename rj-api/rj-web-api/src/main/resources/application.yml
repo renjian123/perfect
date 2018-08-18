@@ -50,16 +50,7 @@ server:
 #日志
 logging:
   file: log/${spring.application.name}.log
-  config: classpath:logback-spring.xml
-  level:
-    bbd_z:
-      dao: debug
-      sql: debug
-      service: debug
-  java:
-    sql:
-      Connection: debug
-
+  config: classpath:logback.xml
 
 eureka:
   client:

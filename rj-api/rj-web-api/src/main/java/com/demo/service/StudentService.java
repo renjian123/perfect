@@ -17,4 +17,9 @@ public class StudentService
     {
         return studentDao.queryStudentList();
     }
+
+    public Student queryStudentById(Integer id)
+    {
+        return studentDao.queryStudentById(id);
+    }
 }

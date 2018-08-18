@@ -9,4 +9,6 @@ import java.util.List;
 public interface StudentDao
 {
     List<Student> queryStudentList();
+
+    Student queryStudentById(Integer id);
 }

@@ -28,9 +28,19 @@ public class StudentController
     public Result<List<Student>> queryStudentList()
     {
         List<Student> studentList = studentService.queryStudentList();
-        logger.debug("this is a good day");
+        logger.info("this is a good day");
         return ResultBuilder.aResult()
                 .withData(studentList)
+                .build();
+    }
+
+    @RequestMapping("queryStudentById/{id}")
+    public Result<List<Student>> queryStudentById(@PathVariable Integer id)
+    {
+        Student student = studentService.queryStudentById(id);
+        logger.debug("this is a good day");
+        return ResultBuilder.aResult()
+                .withData(student)
                 .build();
     }
 }
