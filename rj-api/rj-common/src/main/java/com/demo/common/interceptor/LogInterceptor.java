@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @Component
-
 public class LogInterceptor implements HandlerInterceptor {
 
     private Logger logger = LoggerFactory.getLogger(LogInterceptor.class);

@@ -1,6 +1,8 @@
 package com.demo.controller;
 
 import com.demo.common.bean.Student;
+import com.demo.common.exception.ErrorCodeConstants;
+import com.demo.common.exception.GlobleException;
 import com.demo.common.param.Result;
 import com.demo.common.param.ResultBuilder;
 import com.demo.service.StudentService;
@@ -37,6 +39,10 @@ public class StudentController
     @RequestMapping("queryStudentById/{id}")
     public Result<List<Student>> queryStudentById(@PathVariable Integer id)
     {
+        if(id != null)
+        {
+           throw new GlobleException(ErrorCodeConstants.COMMON_SERVER_10001);
+        }
         Student student = studentService.queryStudentById(id);
         logger.debug("this is a good day");
         return ResultBuilder.aResult()
