@@ -1,10 +1,12 @@
 package com.demo.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.demo.common.bean.Student;
 import com.demo.common.exception.ErrorCodeConstants;
 import com.demo.common.exception.GlobleException;
 import com.demo.common.param.Result;
 import com.demo.common.param.ResultBuilder;
+import com.demo.config.RedisCluster;
 import com.demo.service.StudentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,6 +25,8 @@ public class StudentController
     private static final Logger logger = LoggerFactory.getLogger(StudentController.class);
 
     @Autowired
+    private RedisCluster redisCluster;
+    @Autowired
     private StudentService studentService;
 
     @ApiOperation(value = "查询学生")
@@ -30,6 +34,7 @@ public class StudentController
     public Result<List<Student>> queryStudentList()
     {
         List<Student> studentList = studentService.queryStudentList();
+        redisCluster.set("student", JSON.toJSONString(studentList));
         logger.info("this is a good day");
         return ResultBuilder.aResult()
                 .withData(studentList)
@@ -39,7 +44,7 @@ public class StudentController
     @RequestMapping("queryStudentById/{id}")
     public Result<List<Student>> queryStudentById(@PathVariable Integer id)
     {
-        if(id != null)
+        if(id == null)
         {
            throw new GlobleException(ErrorCodeConstants.COMMON_SERVER_10001);
         }

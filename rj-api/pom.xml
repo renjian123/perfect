@@ -13,6 +13,7 @@
         <module>rj-zuul</module>
         <module>rj-common</module>
         <module>rj-web-api</module>
+        <module>rj-admin</module>
     </modules>
 
     <name>rj-api</name>
